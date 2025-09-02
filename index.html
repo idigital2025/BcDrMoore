@@ -8,24 +8,40 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom Styles -->
+    <!-- Custom Styles with new fonts -->
     <style>
+        /* Font Imports */
+        @font-face {
+            font-family: 'Gin';
+            src: url('fonts/fonnts.com-Gin-.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Stevie Sans';
+            src: url('fonts/fonnts.com-steviesans_regular.otf') format('opentype');
+            font-weight: normal; /* regular */
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Stevie Sans';
+            src: url('fonts/fonnts.com-steviesans_bold.otf') format('opentype');
+            font-weight: bold; /* bold */
+            font-style: normal;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Stevie Sans', sans-serif;
             background-color: #FFFFFF;
             color: #45443E;
         }
-        h1, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Gin', serif;
         }
-        /* Applying Inter font specifically for h2 as requested */
-        h2.font-sans {
-            font-family: 'Inter', sans-serif;
+        .font-sans {
+            font-family: 'Stevie Sans', sans-serif;
         }
         .bg-brand-cream { background-color: #F5F0DD; }
         .bg-brand-red { background-color: #E74F40; }
@@ -69,15 +85,8 @@
              margin: 1rem 0 1.5rem;
         }
         .card-icon {
-            color: #E74F40; /* Changed from fill to color for stroke SVGs */
+            color: #E74F40;
             margin-bottom: 1rem;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
         }
     </style>
 </head>
@@ -102,7 +111,7 @@
 
             <!-- CTA Button -->
             <div class="hidden lg:block">
-                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary">Ver mapa</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -121,7 +130,7 @@
             <a href="actividades-y-articulos.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Actividades y Noticias</a>
             <a href="contacto.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Contacto</a>
             <div class="mt-4 text-center">
-                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary">Ver mapa</a>
             </div>
         </div>
     </header>
@@ -130,10 +139,11 @@
         <!-- Hero Section -->
         <section class="relative h-screen flex items-center justify-center text-white text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-background.png');">
             <div class="px-6 max-w-4xl">
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-4">Bienvenido al corazón <br class="hidden md:block"> de Paredones</h1>
-                <p class="text-lg md:text-xl font-light mb-8">
-                    El Barrio Comercial Dr. Moore es el corazón vivo de Paredones. Con cerca de 30 locales comerciales, fachadas llenas de historia y una comunidad acogedora, este barrio es mucho más que un centro económico: es un punto de encuentro donde la tradición, la cultura y el comercio conviven. Aquí se respira identidad y se comparte el alma de nuestra tierra.
-                </p>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                    <span class="md:block">Bienvenido al corazón</span>
+                    <span class="md:block">de Paredones</span>
+                </h1>
+                <p class="font-sans text-lg md:text-xl font-light mb-8 max-w-3xl mx-auto">El Barrio Comercial Dr. Moore es el corazón vivo de Paredones. Con cerca de 30 locales comerciales, fachadas llenas de historia y una comunidad acogedora, este barrio es mucho más que un centro económico: es un punto de encuentro donde la tradición, la cultura y el comercio conviven. Aquí se respira identidad y se comparte el alma de nuestra tierra</p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                     <a href="sobre-el-barrio.html" class="btn-primary">Descubre el Barrio</a>
                     <a href="tiendas-y-servicios.html" class="btn-secondary">Ver Comercios</a>
@@ -144,58 +154,58 @@
         <!-- Descubre el Barrio Section -->
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <h3 class="text-4xl md:text-5xl font-bold text-brand-dark">Descubre el Barrio Dr. Moore</h3>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Descubre el Barrio Dr. Moore</h3>
                 <svg class="mustache-icon" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
                 <p class="max-w-3xl mx-auto text-lg mb-12">Un homenaje vivo al Dr. Carlos Moore, cuya visión y servicio sentaron las bases de nuestra comunidad. Hoy, su legado inspira un barrio vibrante que fusiona historia, comercio y el espíritu acogedor de Paredones.</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Card 1: Tiendas -->
-                    <div class="bg-brand-cream p-8 rounded-lg text-left flex flex-col">
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"></path>
-                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                                <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path>
-                                <path d="M2 7h20"></path>
-                                <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"></path>
-                            </svg>
-                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Tiendas con historia y cercanía</h3>
+                    <div class="bg-brand-cream p-8 rounded-lg flex flex-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"></path>
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                            <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path>
+                            <path d="M2 7h20"></path>
+                            <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Tiendas con historia y cercanía</h3>
+                        <div class="text-left mt-auto">
+                            <p class="text-brand-dark mb-4">Más de 20 tiendas y servicios locales: alimentación, oficios tradicionales, ópticas, ferreterías y más.</p>
+                            <a href="tiendas-y-servicios.html#tiendas" class="font-bold text-brand-red hover:underline">Ver tiendas →</a>
                         </div>
-                        <p class="text-brand-dark mb-4 flex-grow">Más de 20 tiendas y servicios locales: alimentación, oficios tradicionales, ópticas, ferreterías y más.</p>
-                        <a href="tiendas-y-servicios.html" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver tiendas →</a>
                     </div>
                     <!-- Card 2: Patrimonio -->
-                    <div class="bg-brand-cream p-8 rounded-lg text-left flex flex-col">
-                        <div class="text-center">
-                            <svg class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 22H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M4 22V5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M8 22V18C8 16.8954 8.89543 16 10 16H14C15.1046 16 16 16.8954 16 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M8 12H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M12 12H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M16 12H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M8 7H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M12 7H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M16 7H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Circuito Patrimonio arquitectónico</h3>
+                    <div class="bg-brand-cream p-8 rounded-lg flex flex-col">
+                        <svg class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 22H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4 22V5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 22V18C8 16.8954 8.89543 16 10 16H14C15.1046 16 16 16.8954 16 18V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 12H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 12H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 12H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 7H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 7H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 7H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Circuito Patrimonio arquitectónico</h3>
+                        <div class="text-left mt-auto">
+                            <p class="text-brand-dark mb-4">Conoce fachadas antiguas, corredores típicos y la identidad arquitectónica de la comuna.</p>
+                            <a href="actividades-y-articulos.html#circuito-patrimonio" class="font-bold text-brand-red hover:underline">Conocer circuito →</a>
                         </div>
-                        <p class="text-brand-dark mb-4 flex-grow">Conoce fachadas antiguas, corredores típicos y la identidad arquitectónica de la comuna.</p>
-                       <a href="actividades-y-articulos.html" class="font-bold text-brand-red hover:underline mt-auto self-start">Conocer circuito →</a>
                     </div>
                     <!-- Card 3: Qué Comer -->
-                    <div class="bg-brand-cream p-8 rounded-lg text-left flex flex-col">
-                        <div class="text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"></path>
-                                <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"></path>
-                                <path d="m2.1 21.8 6.4-6.3"></path>
-                                <path d="m19 5-7 7"></path>
-                            </svg>
-                            <h3 class="text-2xl font-bold text-brand-dark mb-2">¿Qué<br>Comer?</h3>
+                    <div class="bg-brand-cream p-8 rounded-lg flex flex-col">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="card-icon w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"></path>
+                            <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"></path>
+                            <path d="m2.1 21.8 6.4-6.3"></path>
+                            <path d="m19 5-7 7"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2"><span>¿Qué</span><br><span>comer?</span></h3>
+                        <div class="text-left mt-auto">
+                            <p class="text-brand-dark mb-4">¡Una parada necesaria para reponerse en Paredones!<br>&nbsp;</p>
+                            <a href="tiendas-y-servicios.html#alimentacion" class="font-bold text-brand-red hover:underline">Ver más →</a>
                         </div>
-                        <p class="text-brand-dark mb-4 flex-grow">¡Una parada necesaria para reponerse en Paredones!<br>&nbsp;</p>
-                        <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver más →</a>
                     </div>
                 </div>
             </div>
@@ -205,68 +215,68 @@
         <section class="py-16 md:py-24 bg-brand-cream">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-4xl md:text-5xl font-bold text-brand-dark">Tiendas Destacadas</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Tiendas destacadas</h3>
                     <svg class="mustache-icon" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
                 </div>
                 <div class="relative">
-                    <div id="tiendas-carousel" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
-                        <!-- Tarjeta 1 -->
+                    <div id="tiendas-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar -mx-4 px-4">
+                        <!-- Card 1 -->
                         <div class="snap-center flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
                             <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                                 <img src="img/la-selecta-vip.png" alt="Imagen del local La Selecta VIP" class="w-full h-48 object-cover">
                                 <div class="p-6 flex-grow flex flex-col">
                                     <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Restaurantes y Comida Rápida</span>
-                                    <h4 class="text-xl font-bold text-brand-dark mb-2">La Selecta VIP</h4>
-                                    <p class="text-brand-dark mb-4 flex-grow">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
-                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto">Ver comercio →</a>
+                                    <h4 class="text-lg font-bold text-brand-dark mb-2">La Selecta VIP</h4>
+                                    <p class="text-brand-dark mb-4 flex-grow text-sm">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
+                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver comercio →</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Tarjeta 2 -->
+                        <!-- Card 2 -->
                         <div class="snap-center flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
                             <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                                 <img src="img/la-selecta-vip.png" alt="Imagen del local La Selecta VIP" class="w-full h-48 object-cover">
                                 <div class="p-6 flex-grow flex flex-col">
                                     <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Restaurantes y Comida Rápida</span>
-                                    <h4 class="text-xl font-bold text-brand-dark mb-2">La Selecta VIP</h4>
-                                    <p class="text-brand-dark mb-4 flex-grow">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
-                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto">Ver comercio →</a>
+                                    <h4 class="text-lg font-bold text-brand-dark mb-2">La Selecta VIP</h4>
+                                    <p class="text-brand-dark mb-4 flex-grow text-sm">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
+                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver comercio →</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Tarjeta 3 -->
+                        <!-- Card 3 -->
                         <div class="snap-center flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
                             <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                                 <img src="img/la-selecta-vip.png" alt="Imagen del local La Selecta VIP" class="w-full h-48 object-cover">
                                 <div class="p-6 flex-grow flex flex-col">
                                     <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Restaurantes y Comida Rápida</span>
-                                    <h4 class="text-xl font-bold text-brand-dark mb-2">La Selecta VIP</h4>
-                                    <p class="text-brand-dark mb-4 flex-grow">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
-                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto">Ver comercio →</a>
+                                    <h4 class="text-lg font-bold text-brand-dark mb-2">La Selecta VIP</h4>
+                                    <p class="text-brand-dark mb-4 flex-grow text-sm">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
+                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver comercio →</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Tarjeta 4 -->
+                        <!-- Card 4 -->
                         <div class="snap-center flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
-                            <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
+                             <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                                 <img src="img/la-selecta-vip.png" alt="Imagen del local La Selecta VIP" class="w-full h-48 object-cover">
                                 <div class="p-6 flex-grow flex flex-col">
                                     <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Restaurantes y Comida Rápida</span>
-                                    <h4 class="text-xl font-bold text-brand-dark mb-2">La Selecta VIP</h4>
-                                    <p class="text-brand-dark mb-4 flex-grow">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
-                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto">Ver comercio →</a>
+                                    <h4 class="text-lg font-bold text-brand-dark mb-2">La Selecta VIP</h4>
+                                    <p class="text-brand-dark mb-4 flex-grow text-sm">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
+                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver comercio →</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Tarjeta 5 -->
+                        <!-- Card 5 -->
                         <div class="snap-center flex-shrink-0 w-full sm:w-1/2 md:w-1/3 p-4">
-                            <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
+                             <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col h-full">
                                 <img src="img/la-selecta-vip.png" alt="Imagen del local La Selecta VIP" class="w-full h-48 object-cover">
                                 <div class="p-6 flex-grow flex flex-col">
                                     <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Restaurantes y Comida Rápida</span>
-                                    <h4 class="text-xl font-bold text-brand-dark mb-2">La Selecta VIP</h4>
-                                    <p class="text-brand-dark mb-4 flex-grow">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
-                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto">Ver comercio →</a>
+                                    <h4 class="text-lg font-bold text-brand-dark mb-2">La Selecta VIP</h4>
+                                    <p class="text-brand-dark mb-4 flex-grow text-sm">Restaurante tradicional con menú diario y platos de la zona, opción con quinoa. Horario de atención: Lunes a viernes 12:00–15:30 hrs.</p>
+                                    <a href="tiendas-y-servicios.html#cat-restaurantes" class="font-bold text-brand-red hover:underline mt-auto self-start">Ver comercio →</a>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +289,7 @@
         </section>
 
         <!-- Photo Gallery Section -->
-        <section class="pb-12 bg-white">
+        <section class="py-12 bg-white">
             <div class="w-full">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-0">
                     <div class="h-52 md:h-[320px]">
@@ -298,15 +308,29 @@
             </div>
         </section>
 
+        <!-- Mapa Section -->
+        <section class="py-16 md:py-24 bg-brand-cream">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Recorre el Barrio, vive la experiencia</h3>
+                <svg class="mustache-icon" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
+                <p class="max-w-3xl mx-auto text-lg mb-8">La Avenida Dr. Moore es el eje principal de Paredones, y sus calles aledañas enriquecen y conforman junto a su comunidad; el barrio comercial Dr. Moore.</p>
+                <div class="w-full h-96 rounded-lg overflow-hidden mb-8 shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.59368536124!2d-71.8988086!3d-34.6510103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96636773563a6285%3A0x53047b23b8f2d593!2sParedones%2C%2C%20O'Higgins!5e0!3m2!1ses!2scl!4v1689874591234!5m2!1ses!2scl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- Sobre el Barrio Resumen Section -->
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     <div class="md:w-1/2">
-                        <img src="img/foto-historica.png" alt="Imagen histórica del barrio" class="rounded-lg shadow-lg w-full md:w-2/3 mx-auto">
+                        <div class="w-full md:w-4/5 mx-auto">
+                           <img src="img/foto-historica.png" alt="Imagen histórica del barrio" class="rounded-lg shadow-lg w-full h-auto">
+                        </div>
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
-                        <h3 class="text-4xl md:text-5xl font-bold text-brand-dark">Un Barrio con Historia</h3>
+                        <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Un Barrio con Historia</h3>
                         <svg class="mustache-icon mx-auto md:mx-0" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
                         <p class="text-lg mb-6">Un espacio patrimonial donde el legado del Doctor Moore inspira comercio, cultura y vida local.</p>
                         <a href="sobre-el-barrio.html#historia" class="btn-primary">Conoce nuestra historia</a>
@@ -319,16 +343,16 @@
         <section class="py-16 md:py-24 bg-brand-cream">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-4xl md:text-5xl font-bold text-brand-dark">Artículos de interés</h3>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Artículos de interés</h3>
                     <svg class="mustache-icon" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Article Card 1 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <img src="img/circuito-gastronomico-card.png" alt="Imagen del artículo" class="w-full h-48 object-cover">
+                     <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="img/circuito-gastronomico.png" alt="Imagen del artículo" class="w-full h-48 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Circuito</span>
-                            <h4 class="text-xl font-bold text-brand-dark mb-2">Circuito Gastronómico en el Barrio Comercial Dr. Moore</h4>
+                            <h4 class="text-lg font-bold text-brand-dark mb-2">Circuito Gastronómico en el Barrio Comercial Dr. Moore</h4>
                             <p class="text-brand-dark mb-4 flex-grow">Viajar a Paredones no es solo descubrir su historia patrimonial, también es saborear la esencia del campo chileno en cada plato...</p>
                             <a href="circuito-gastronomico.html" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
                         </div>
@@ -338,7 +362,7 @@
                         <img src="img/articulo-2.png" alt="Imagen del artículo" class="w-full h-48 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Entrevista</span>
-                            <h4 class="text-xl font-bold text-brand-dark mb-2">Conversando con la dueña del almacén más antiguo</h4>
+                            <h4 class="text-lg font-bold text-brand-dark mb-2">Conversando con la dueña del almacén más antiguo</h4>
                             <p class="text-brand-dark mb-4 flex-grow">Una charla sobre historia, comunidad y el secreto para mantenerse vigente por más de 50 años.</p>
                             <a href="#" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
                         </div>
@@ -348,7 +372,7 @@
                         <img src="img/articulo-3.png" alt="Imagen del artículo" class="w-full h-48 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Actividad</span>
-                            <h4 class="text-xl font-bold text-brand-dark mb-2">Cicletada familiar por el patrimonio</h4>
+                            <h4 class="text-lg font-bold text-brand-dark mb-2">Cicletada familiar por el patrimonio</h4>
                             <p class="text-brand-dark mb-4 flex-grow">Únete a este recorrido en bicicleta para toda la familia y redescubre los rincones del barrio.</p>
                             <a href="#" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
                         </div>
@@ -372,7 +396,7 @@
                 </div>
                 <!-- Contacto -->
                 <div class="md:col-span-1 md:text-center">
-                    <h5 class="font-bold text-lg mb-4">Contacto</h5>
+                    <h5 class="font-bold text-base mb-4">Contacto</h5>
                     <p class="text-sm text-white mb-2">Avenida Dr. Moore, Paredones</p>
                     <a href="mailto:contacto@barriocomercialdrmoore.cl" class="text-sm text-white hover:text-brand-red">contacto@barriocomercialdrmoore.cl</a>
                     <div class="flex justify-center md:justify-center space-x-4 mt-4">
@@ -386,7 +410,7 @@
                 </div>
                 <!-- Enlaces Legales -->
                 <div class="md:col-span-1 md:text-right">
-                    <h5 class="font-bold text-lg mb-4">Enlaces</h5>
+                    <h5 class="font-bold text-base mb-4">Enlaces</h5>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-sm text-white hover:text-brand-red">Política de Privacidad</a></li>
                         <li><a href="#" class="text-sm text-white hover:text-brand-red">Términos y Condiciones</a></li>
