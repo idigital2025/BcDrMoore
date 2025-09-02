@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Barrio Comercial Dr. Moore</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #45443E;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-brand-cream { background-color: #F5F0DD; }
+        .bg-brand-red { background-color: #E74F40; }
+        .bg-brand-dark { background-color: #45443E; }
+        .text-brand-red { color: #E74F40; }
+        .text-brand-dark { color: #45443E; }
+        .border-brand-red { border-color: #E74F40; }
+        .btn-primary {
+            background-color: #E74F40;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #d14234;
+        }
+        .mustache-icon {
+            width: 64px; 
+            height: auto;
+            fill: #E74F40;
+            margin: 1rem auto 2rem; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="img/logo.png" alt="Logotipo Barrio Comercial Dr. Moore" class="h-16 w-auto">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Inicio</a>
+                <a href="sobre-el-barrio.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">El barrio</a>
+                <a href="tiendas-y-servicios.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Tiendas y Servicios</a>
+                <a href="actividades-y-articulos.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Actividades y Noticias</a>
+                <a href="contacto.html" class="text-brand-red font-bold transition-colors duration-300">Contacto</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-brand-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white py-4">
+            <a href="index.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Inicio</a>
+            <a href="sobre-el-barrio.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">El barrio</a>
+            <a href="tiendas-y-servicios.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Tiendas y Servicios</a>
+            <a href="actividades-y-articulos.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Actividades y Noticias</a>
+            <a href="contacto.html" class="block text-center py-2 px-4 text-sm text-brand-red font-bold bg-brand-cream">Contacto</a>
+            <div class="mt-4 text-center">
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Banner principal -->
+        <section class="py-16 md:py-20 bg-brand-cream text-center">
+            <div class="container mx-auto px-6">
+                <svg class="w-16 h-16 text-brand-red mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" /><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" /></svg>
+                <h2 class="text-5xl md:text-6xl font-bold text-brand-dark">Contáctanos</h2>
+                <h3 class="text-2xl md:text-3xl text-brand-dark mt-4 mb-6">Estamos para escucharte y colaborar</h3>
+                <p class="text-lg text-brand-dark max-w-3xl mx-auto">Ya seas vecino de Paredones, locatario, visitante o turista, queremos saber de ti. El Barrio Comercial Dr. Moore es un espacio de encuentro abierto a nuevas ideas, colaboración y actividades.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Formulario de Contacto -->
+                    <div>
+                        <h3 class="text-3xl font-bold text-brand-dark mb-6">Envíanos tu mensaje</h3>
+                        <form action="#" method="POST">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-brand-dark">Nombre</label>
+                                    <input type="text" name="name" id="name" required placeholder="Ej: Juan Pérez" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-red focus:border-brand-red">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-brand-dark">Correo electrónico</label>
+                                    <input type="email" name="email" id="email" required placeholder="Ej: juan.perez@correo.com" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-red focus:border-brand-red">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-brand-dark">Teléfono (opcional)</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="Ej: 912345678" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-red focus:border-brand-red">
+                                </div>
+                                <div>
+                                    <label for="reason" class="block text-sm font-medium text-brand-dark">Motivo de contacto</label>
+                                    <select id="reason" name="reason" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-red focus:border-brand-red">
+                                        <option>Consultas generales</option>
+                                        <option>Propuesta de actividad o feria</option>
+                                        <option>Interconexión con otros barrios</option>
+                                        <option>Medios de comunicación o difusión</option>
+                                        <option>Sugerencias para el barrio</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-brand-dark">Mensaje</label>
+                                    <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí..." class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-red focus:border-brand-red"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn-primary w-full md:w-1/2">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Información de contacto directa -->
+                    <div>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-xl font-bold text-brand-dark flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    Correo
+                                </h4>
+                                <a href="mailto:contacto@barriocomercialdrmoore.cl" class="text-brand-red hover:underline ml-9">contacto@barriocomercialdrmoore.cl</a>
+                            </div>
+                             <div>
+                                <h4 class="text-xl font-bold text-brand-dark flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                    Dirección
+                                </h4>
+                                <p class="ml-9">Avenida Doctor Moore, Paredones, Provincia de Cardenal Caro, Región de O'Higgins, Chile.</p>
+                            </div>
+                            <div class="w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.451630981995!2d-71.9024095242981!3d-33.65756057329433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96636773563a6285%3A0x53047b23b8f2d593!2sParedones%2C%2C%20O'Higgins!5e0!3m2!1ses!2scl!4v1614285785055!5m2!1ses!2scl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                             <div>
+                                <h4 class="text-xl font-bold text-brand-dark mb-3">Redes Sociales</h4>
+                                <div class="flex flex-col space-y-2 ml-9">
+                                     <a href="#" class="flex items-center gap-2 text-brand-dark hover:text-brand-red">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                                        @bcomercialdrmoore
+                                     </a>
+                                     <a href="#" class="flex items-center gap-2 text-brand-dark hover:text-brand-red">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                        /bcomercialdrmoore
+                                     </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Llamado comunitario final -->
+        <section class="py-16 md:py-24 bg-brand-cream">
+            <div class="container mx-auto px-6 text-center">
+                 <h3 class="text-4xl md:text-5xl font-bold text-brand-dark">Hagamos barrio entre todos</h3>
+                 <svg class="mustache-icon" viewBox="0 0 1006.7 362" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><g><path d="M116.5,68.5c-4.6,2.4-6.1,3.3-7.8,4c-28.3,11-41,31.7-36.3,59.2c4.2,24.5,29.2,45.9,55.4,46.1 c28.6,0.3,53.9-11.1,74.9-29.1c21.8-18.6,41.3-40,60.7-61.2c27.8-30.4,58.8-55.4,99.6-66.1c45.9-12,86.4-2,122.2,28.9 c5.6,4.8,8,10.2,8,17.9c-0.4,43.8-0.1,87.5-0.3,131.3c0,5.3-1.2,10.9-3.5,15.7c-18,38.1-48,65.1-83.8,85.2 c-81.3,45.8-167.4,59-256.8,28.1c-54.3-18.8-97-53.1-120-107.7c-12.5-29.7-14.8-60.7-6.5-92.1c6.4-24.2,20.6-43.4,40.9-57.7 c12.3-8.7,26.5-12,41.5-9C108.1,62.8,111.1,65.5,116.5,68.5z M62.9,174.5c0.8,0.4,1.6,0.8,2.3,1.2c-0.4-0.8-0.7-1.6-1.1-2.4 c-0.9-0.6-1.8-1.2-2.7-1.7c-0.4-0.4-0.8-0.7-1.3-1.1c0.5,0.3,1,0.6,1.4,0.9C62.1,172.4,62.5,173.5,62.9,174.5z M287.2,147.5 c-0.7,0.7-1.4,1.4-2.2,2.2c-0.2,0.5-0.4,1-0.6,1.5c0.1-0.5,0.3-1.1,0.4-1.6c0.7-0.7,1.5-1.5,2.2-2.2c1.1-0.3,2.2-0.5,3.4-0.8 c1.2-1,2.4-2,3.7-3c13.4-11.2,27-22.1,40.2-33.5c20.2-17.4,42-31.5,68.8-36.1c10.3-1.8,20.8-2.4,31.3-3.5c0-0.9-0.1-1.8-0.1-2.6 c-13.5,0.7-27.4-0.1-40.6,2.5c-44.1,8.8-73.9,38.8-101.4,71.5c-1,1.1-2.1,2.2-3.1,3.4C288.4,145.8,287.8,146.6,287.2,147.5z M416.7,226.6c1-1.2,2-2.4,3-3.7c2-2.4,4-4.8,6-7.2c0.9-1.3,1.8-2.6,2.8-3.9c0.4-1.4,0.8-2.7,1.2-4.1c-0.9,0.9-1.9,1.8-2.8,2.7 c-1,1.2-1.9,2.5-2.9,3.7c-2,2.4-3.9,4.8-5.9,7.2c-0.9,1.3-1.8,2.5-2.7,3.8c-0.7,0.7-1.4,1.4-2.2,2.1c-8.6,8.3-17.2,16.5-25.7,24.8 c-2.6,2.2-5.2,4.5-7.8,6.7c1.2,1.2,2.4,2.4,3.6,3.6c1.9-2.9,3.9-5.7,5.8-8.6c8.6-8.3,17.2-16.6,25.7-24.9 C415.3,228.2,416,227.4,416.7,226.6z M455.1,55.9c-3.4-1.7-6.7-3.7-10.2-5.2c-32.6-13.9-64.7-10.9-96.3,3.4 c-29.3,13.3-51,35.9-72.7,58.6c-21.7,22.6-43,45.7-66,66.9c-37,33.9-100.8,36.2-137,1.4c-1.7-1.6-3.8-2.6-5.8-3.9 c1.4,4.8,4.2,8.4,7.6,11.1c38.6,30.9,93.6,32.4,134.6-0.4c29.4-23.6,55.5-51.4,82.3-78.1c23.8-23.7,48.6-45.1,82-54.1 C400.8,48.3,427.7,49.9,455.1,55.9z M446,93.5c-20.7-0.1-38.6,8.5-53.1,22.1c-24.6,23.2-48.4,47.4-71.5,72.1 c-54.8,58.8-118.1,88.1-198.9,59.5c-4.4-1.5-8.9-2.4-13.4-3.6c-0.3,0.9-0.5,1.8-0.8,2.7c8.6,3.6,17.1,7.8,26,10.7 c59.1,18.8,112.4,3.7,159-32.9c25.2-19.8,45.4-46,67.5-69.7C385.1,128.4,409.7,103.1,446,93.5z M282.5,287.2 c-29.9,5.5-59.1,10.9-84.3,15.5C224.6,305.3,253.5,298.7,282.5,287.2z M298.3,280.1c-0.2-0.6-0.5-1.2-0.7-1.8 c-2.6,1.1-5.3,2.2-7.9,3.3c0.2,0.6,0.5,1.1,0.7,1.7C293,282.2,295.7,281.1,298.3,280.1z M443.9,72.1c-0.1-0.2-0.1-0.4-0.2-0.6 c-1,0.1-2,0.1-3,0.2c0,0.2,0,0.3,0,0.5C441.8,72.1,442.8,72.1,443.9,72.1z M286.7,284.3c-0.2-0.2-0.4-0.7-0.7-0.7 c-0.2,0-0.5,0.4-0.8,0.6c0.2,0.2,0.5,0.6,0.7,0.6C286.2,284.8,286.5,284.5,286.7,284.3z"/><path d="M891.1,69.1c8.2-8.6,16.4-9.1,24.7-7.8c31.6,4.8,52,24.2,63,52.8c20.9,54.3,9.9,103.8-26.3,148.3 c-37,45.4-86.9,68.4-143.1,76.7c-80.7,11.9-156.8-2.5-225.5-48.4c-25.4-17-47.6-37.5-62.8-64.5c-3.9-6.9-6.2-15.6-6.3-23.6 c-0.6-45.6,0-91.2-0.5-136.8c-0.1-9.2,3-15.1,10-20.2C572.6,11,623.2,8.8,675.7,35.3c29.2,14.7,52.5,36.7,73.2,61.5 c23,27.6,46.8,54.1,80.1,69.8c16.3,7.7,33.2,12.9,51.7,11.7c35.8-2.3,62.5-38.7,52.6-72c-4.6-15.3-14.7-25.6-29.4-31.7 C900.2,73.1,896.7,71.5,891.1,69.1z M603.6,242.5c0.7,0.7,1.5,1.5,2.2,2.2c16.9,17.9,35.4,33.4,58.8,42.2 c-19.1-14.5-38.3-29-57.4-43.5c-0.7-0.7-1.4-1.4-2.2-2.2c-0.8-0.7-1.6-1.4-2.3-2.1c-0.7-0.7-1.5-1.5-2.2-2.2 c-0.8-0.7-1.6-1.3-2.4-2c-0.6-0.3-1.2-0.6-1.8-0.9c0.6,0.3,1.1,0.6,1.7,0.9c0.6,0.9,1.2,1.7,1.8,2.6c0.7,0.7,1.4,1.5,2.2,2.2 C602.5,240.7,603.1,241.6,603.6,242.5z M941.8,178c0.6-0.7,1.1-1.3,1.7-2c-0.4-0.1-0.9-0.3-1.3-0.4c-0.1,0.9-0.2,1.7-0.2,2.6 c-1.1,0.4-2.1,0.8-3.2,1.2c-2.3,2-4.6,4-7,6c-24,17.9-50.5,24.6-80.3,19.2c-28.7-5.2-52.5-19.2-72.7-39.6 c-26.4-26.7-51.7-54.4-78.7-80.4c-28.9-27.9-63.3-44.3-104.7-39.9c-12.4,1.3-24.5,5.2-36.8,7.9c0.2,1,0.5,2,0.7,3.1 c3.2-0.5,6.4-1.4,9.6-1.5c16.3-0.7,32.8-3,48.8-1.4c33.5,3.4,59.6,22.4,83,44.9c20.8,19.9,40.1,41.3,61.1,61 c21.1,19.7,44,37.6,71.6,47.1c36.5,12.6,70.1,6.3,100.1-18.4c2.1-2.2,4.3-4.5,6.4-6.7C940.5,179.7,941.1,178.8,941.8,178z M856.2,255.2c-37.9,5.1-74-1-108.2-18.1c-30.2-15.2-53-39.3-76.8-62.4c-22.7-22-46.8-42.7-71.1-62.9c-7.8-6.5-18.3-9.7-27.5-14.5 c8.7,8.5,19.6,13.4,28,21.1c25.3,23.5,50.4,47.4,74.3,72.3c49.8,51.9,108.7,78.2,181.5,68.2c7.2-2,14.3-3.9,21.5-5.9 c-0.3-1-0.6-1.9-0.8-2.9C870.1,251.8,863.1,253.5,856.2,255.2z M712.7,142.7c-23.4-43.5-97.8-82.9-135.6-71.1 C635.8,70,671.1,111.9,712.7,142.7z M682,264.2c31.1,20.4,65.8,33.4,102.9,34.8C751.2,287.6,716.3,275.8,682,264.2z M881.3,249.2 c0.2,0.3,0.5,0.8,0.7,0.7c0.6-0.1,1.2-0.4,1.8-0.6c-0.2-0.3-0.5-0.7-0.7-0.7C882.5,248.7,881.9,249,881.3,249.2z M678,260.9 c0.3-0.3,0.6-0.5,0.9-0.7c-0.3-0.2-0.5-0.7-0.8-0.7c-0.3,0-0.5,0.4-0.8,0.6C677.5,260.3,677.8,260.6,678,260.9z"/></g></svg>
+                 <p class="text-lg text-brand-dark max-w-4xl mx-auto mt-8">Si eres de la comuna, de alrededores o visitas desde otras regiones, tu participación nos ayuda a fortalecer este espacio patrimonial y comercial.<br>¡Súmate a nuestras actividades, comparte tu experiencia o propón nuevas ideas para hacer crecer el Barrio Comercial Dr. Moore!</p>
+                 <div class="mt-8">
+                    <img src="img/calle-paredones.png" alt="Fotografía de calle de Paredones" class="rounded-lg w-full max-w-4xl mx-auto">
+                 </div>
+            </div>
+        </section>
+
+        <!-- Sección: Socios y Apoyos -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-brand-dark mb-12">Apoyos y Alianzas</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                    <a href="https://www.sercotec.cl/" target="_blank"><img src="img/logo-sercotec.png" alt="Logo Sercotec" class="h-20 w-auto"></a>
+                    <a href="https://www.sercotec.cl/barrios-comerciales/el-programa/" target="_blank"><img src="img/logo-barrios-comerciales.png" alt="Logo Barrios Comerciales" class="h-20 w-auto"></a>
+                    <a href="https://www.goreohiggins.cl/" target="_blank"><img src="img/logo-gore-ohiggins.png" alt="Logo Gobierno Regional de O'Higgins" class="h-20 w-auto"></a>
+                    <a href="https://www.comunaparedones.cl/" target="_blank"><img src="img/logo-municipalidad.png" alt="Logo Municipalidad de Paredones" class="h-24 w-auto"></a>
+                    <a href="https://www.serviciopais.cl/" target="_blank"><img src="img/logo-servicio-pais.png" alt="Logo Fundación para la Superación de la Pobreza" class="h-24 w-auto"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Logo & Description -->
+                <div class="md:col-span-1">
+                    <img src="img/logo.png" alt="Logotipo Barrio Comercial Dr. Moore" class="h-20 w-auto mx-auto md:mx-0 mb-4">
+                    <p class="text-sm text-white">Barrio Comercial Dr. Moore ubicada en la Avenida principal de la comuna de Paredones, Provincia de Cardenal Caro, Región de O'Higgins, Chile. Aprox. a 185 km de Santiago y a 46 km de Pichilemu.</p>
+                </div>
+                <!-- Contacto -->
+                <div class="md:col-span-1 md:text-center">
+                    <h5 class="font-bold text-lg mb-4">Contacto</h5>
+                    <p class="text-sm text-white mb-2">Avenida Dr. Moore, Paredones</p>
+                    <a href="mailto:contacto@barriocomercialdrmoore.cl" class="text-sm text-white hover:text-brand-red">contacto@barriocomercialdrmoore.cl</a>
+                    <div class="flex justify-center md:justify-center space-x-4 mt-4">
+                        <a href="#" aria-label="Facebook" class="text-white hover:text-brand-red">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-white hover:text-brand-red">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Enlaces Legales -->
+                <div class="md:col-span-1 md:text-right">
+                    <h5 class="font-bold text-lg mb-4">Enlaces</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-white hover:text-brand-red">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-sm text-white hover:text-brand-red">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-white">
+                <p>&copy; 2024 Barrio Comercial Dr. Moore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-6 right-6 bg-brand-red text-white p-3 rounded-full shadow-lg hover:bg-d14234 transition-opacity duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        var mobileMenuButton = document.getElementById('mobile-menu-button');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Scroll to top button
+        var scrollToTopButton = document.getElementById('scroll-to-top');
+        if (scrollToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>

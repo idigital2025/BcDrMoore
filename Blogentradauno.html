@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuito Gastronómico - Barrio Comercial Dr. Moore</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #45443E;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-brand-cream { background-color: #F5F0DD; }
+        .bg-brand-red { background-color: #E74F40; }
+        .bg-brand-dark { background-color: #45443E; }
+        .text-brand-red { color: #E74F40; }
+        .text-brand-dark { color: #45443E; }
+        .border-brand-red { border-color: #E74F40; }
+        .btn-primary {
+            background-color: #E74F40;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #d14234;
+        }
+         .btn-secondary {
+            background-color: transparent;
+            color: #45443E;
+            border: 2px solid #45443E;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-secondary:hover {
+            background-color: #45443E;
+            color: #FFFFFF;
+        }
+        .mustache-icon {
+            width: 64px; 
+            height: auto;
+            fill: #E74F40;
+            margin: 1rem auto 2rem; 
+        }
+        /* Article body styles */
+        .article-content h2 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #45443E;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content h3 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #45443E;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content p, .article-content ul {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        .article-content ul {
+            list-style-position: inside;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="img/logo.png" alt="Logotipo Barrio Comercial Dr. Moore" class="h-16 w-auto">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Inicio</a>
+                <a href="sobre-el-barrio.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">El barrio</a>
+                <a href="tiendas-y-servicios.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Tiendas y Servicios</a>
+                <a href="actividades-y-articulos.html" class="text-brand-red font-bold transition-colors duration-300">Actividades y Noticias</a>
+                <a href="contacto.html" class="text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium">Contacto</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-brand-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white py-4">
+            <a href="index.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Inicio</a>
+            <a href="sobre-el-barrio.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">El barrio</a>
+            <a href="tiendas-y-servicios.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Tiendas y Servicios</a>
+            <a href="actividades-y-articulos.html" class="block text-center py-2 px-4 text-sm text-brand-red font-bold bg-brand-cream">Actividades y Noticias</a>
+            <a href="contacto.html" class="block text-center py-2 px-4 text-sm text-brand-dark hover:bg-brand-cream">Contacto</a>
+            <div class="mt-4 text-center">
+                <a href="tiendas-y-servicios.html#mapa" class="btn-primary !w-auto">Ver mapa</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero del artículo -->
+        <section class="py-16 md:py-24 bg-brand-cream">
+            <div class="container mx-auto px-6">
+                <div class="mb-8 text-sm text-brand-dark text-center md:text-left">
+                    <a href="index.html" class="hover:text-brand-red">Inicio</a> &gt; 
+                    <a href="actividades-y-articulos.html" class="hover:text-brand-red">Actividades y Artículos</a> &gt; 
+                    <span class="font-medium">Circuito Gastronómico</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <span class="bg-brand-red text-white text-sm font-bold px-3 py-1 rounded-full self-start mb-4 inline-block">Circuito</span>
+                        <h1 class="text-5xl md:text-6xl font-bold text-brand-dark">Circuito Gastronómico en el Barrio Comercial Dr. Moore</h1>
+                        <p class="text-brand-dark mt-4"><strong>Fecha de publicación:</strong> 26 de Julio, 2024</p>
+                    </div>
+                    <div>
+                        <img src="img/circuito-gastronomico-destacada.png" alt="Imagen destacada del artículo gastronómico" class="rounded-lg shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuerpo del artículo -->
+        <article class="article-content container mx-auto px-6 py-16 md:py-24 max-w-4xl">
+            <p class="text-xl leading-8">Viajar a Paredones no es solo descubrir su historia patrimonial, también es saborear la esencia del campo chileno en cada plato, pan amasado, dulces caseros o pasteles de guañaca. El Barrio Comercial Dr. Moore concentra rincones gastronómicos auténticos que convierten una visita en una experiencia completa. Es el lugar perfecto para quienes viajan rumbo a Pichilemu y desean conocer más localidades del sector, buscando gastronomía tradicional o escapar de Santiago en un fin de semana. No probar la cocina de Paredones es perderse su identidad viva; aquí los sabores son parte de la historia que se camina.</p>
+            
+            <div>
+                <h2>Panaderías con tradición</h2>
+                <img src="img/panaderia-tradicion.png" alt="Pan amasado en horno de barro" class="rounded-lg shadow-md w-full md:w-1/2 md:float-right md:ml-8 mb-4">
+                <p>El aroma del pan amasado te guía por las calles de Paredones. En la panadería <strong>Las 3 N</strong>, las empanadas de pera son casi una obligación: una receta de generaciones que mezcla fruta y masa en una combinación única (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+19,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 19</a>, Tel. <a href="tel:+56985813927" class="text-brand-red hover:underline">+56 9 8581 3927</a>). Muy cerca, <strong>La Central</strong> mantiene la costumbre de abrir temprano para ofrecer pan caliente y empanadas de domingo, convirtiéndose en el punto de partida perfecto para un desayuno de plaza (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+25,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 25</a>, Tel. <a href="tel:+569964345034" class="text-brand-red hover:underline">+56 9 9643 45034</a>).</p>
+            </div>
+            <div style="clear: both;"></div>
+
+            <div>
+                <h2>Comida rápida y platos caseros</h2>
+                <img src="img/comida-casera.png" alt="Plato de comida casera" class="rounded-lg shadow-md w-full md:w-1/2 md:float-left md:mr-8 mb-4">
+                <p>Si el paseo se alarga hasta la hora de almuerzo, el barrio ofrece cocina casera y rápida en un entorno local. <strong>El Comilón de las Palmeras</strong> es ideal para un completo italiano o un sándwich al paso antes de seguir recorriendo (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+39,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 39</a>, Tel. <a href="tel:+569983146190" class="text-brand-red hover:underline">+56 9 9831 46190</a>). A metros de ahí, <strong>El Emporio del Sabor</strong> invita con almuerzos caseros y pollos asados que recuerdan las cocinas familiares de antaño (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+40,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 40</a>, Tel. <a href="tel:+569988315433" class="text-brand-red hover:underline">+56 9 9883 15433</a>). Para quienes prefieren menú del día, <strong>La Selecta VIP</strong> rescata sabores tradicionales e incluso incorpora quinoa en sus preparaciones, reflejo de la producción local (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+17,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 17</a>, Tel. <a href="tel:+569996249802" class="text-brand-red hover:underline">+56 9 9962 49802</a>).</p>
+            </div>
+            
+            <div style="clear: both;"></div>
+
+            <h2>Sabores para llevar</h2>
+            <p>Para quienes buscan productos frescos o provisiones, la <strong>Verdulería El Canelo</strong> es parada obligada: frutas y verduras de estación directo del productor (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+22,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 22</a>, Tel. <a href="tel:+569931360075" class="text-brand-red hover:underline">+56 9 9313 60075</a>). En <strong>Almacén Corita</strong>, la experiencia es la de un almacén de pueblo con atención cercana y provisiones básicas para cualquier visitante (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+33,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 33</a>, Tel. <a href="tel:+569968363449" class="text-brand-red hover:underline">+56 9 9683 63449</a>). Ambos son perfectos para preparar un picnic improvisado o abastecerse para el viaje.</p>
+
+            <!-- Cierre del artículo -->
+            <div class="text-center mt-16">
+                <p class="text-lg mb-6">El Barrio Comercial Dr. Moore ofrece una gastronomía auténtica. Pan amasado que aún humea, empanadas de pera, almuerzos caseros y completos sencillos forman parte de una experiencia que conecta a quien visita con la esencia de Paredones. Recorrer sus sabores es tanto un viaje culinario como un acto de comunidad.</p>
+                <p class="text-lg mb-6 font-semibold">Planifica tu visita, descubre el circuito patrimonial y acompáñalo con los sabores del barrio.</p>
+                <a href="actividades-y-articulos.html" class="btn-secondary">Volver a Actividades y Artículos</a>
+            </div>
+        </article>
+
+        <!-- Artículos relacionados -->
+        <section class="py-16 md:py-24 bg-brand-cream">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-brand-dark text-center mb-12">También te puede interesar</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Artículo relacionado 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="img/circuito-patrimonio.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Circuito</span>
+                            <h4 class="text-xl font-bold text-brand-dark mb-2">Circuito Patrimonial</h4>
+                            <a href="articulo-template.html" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
+                        </div>
+                    </div>
+                    <!-- Artículo relacionado 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="img/feria-verano.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Noticia</span>
+                            <h4 class="text-xl font-bold text-brand-dark mb-2">Feria local de verano</h4>
+                            <a href="#" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
+                        </div>
+                    </div>
+                    <!-- Artículo relacionado 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                        <img src="img/entrevista-panaderia.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Entrevista</span>
+                            <h4 class="text-xl font-bold text-brand-dark mb-2">Entrevista a Las 3 N</h4>
+                            <a href="#" class="font-bold text-brand-red hover:underline mt-auto">Leer artículo →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Logo & Description -->
+                <div class="md:col-span-1">
+                    <img src="img/logo.png" alt="Logotipo Barrio Comercial Dr. Moore" class="h-20 w-auto mx-auto md:mx-0 mb-4">
+                    <p class="text-sm text-white">Barrio Comercial Dr. Moore ubicada en la Avenida principal de la comuna de Paredones, Provincia de Cardenal Caro, Región de O'Higgins, Chile. Aprox. a 185 km de Santiago y a 46 km de Pichilemu.</p>
+                </div>
+                <!-- Contacto -->
+                <div class="md:col-span-1 md:text-center">
+                    <h5 class="font-bold text-lg mb-4">Contacto</h5>
+                    <p class="text-sm text-white mb-2">Avenida Dr. Moore, Paredones</p>
+                    <a href="mailto:contacto@barriocomercialdrmoore.cl" class="text-sm text-white hover:text-brand-red">contacto@barriocomercialdrmoore.cl</a>
+                    <div class="flex justify-center md:justify-center space-x-4 mt-4">
+                        <a href="#" aria-label="Facebook" class="text-white hover:text-brand-red">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-white hover:text-brand-red">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Enlaces Legales -->
+                <div class="md:col-span-1 md:text-right">
+                    <h5 class="font-bold text-lg mb-4">Enlaces</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-white hover:text-brand-red">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-sm text-white hover:text-brand-red">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-white">
+                <p>&copy; 2024 Barrio Comercial Dr. Moore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="hidden fixed bottom-6 right-6 bg-brand-red text-white p-3 rounded-full shadow-lg hover:bg-d14234 transition-opacity duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        var mobileMenuButton = document.getElementById('mobile-menu-button');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Scroll to top button
+        var scrollToTopButton = document.getElementById('scroll-to-top');
+        if (scrollToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopButton.classList.remove('hidden');
+                } else {
+                    scrollToTopButton.classList.add('hidden');
+                }
+            });
+            scrollToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
