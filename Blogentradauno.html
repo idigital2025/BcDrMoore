@@ -11,17 +11,23 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
     <style>
+        @font-face {
+            font-family: 'Gin';
+            src: url('fonts/fonnts.com-Gin-.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #FFFFFF;
             color: #45443E;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Gin', serif;
         }
         .bg-brand-cream { background-color: #F5F0DD; }
         .bg-brand-red { background-color: #E74F40; }
@@ -148,7 +154,7 @@
                         <p class="text-brand-dark mt-4"><strong>Fecha de publicación:</strong> 26 de Julio, 2024</p>
                     </div>
                     <div>
-                        <img src="img/circuito-gastronomico-destacada.png" alt="Imagen destacada del artículo gastronómico" class="rounded-lg shadow-lg w-full">
+                        <img src="img/circuito-gastronomico-destacada.png" alt="Imagen destacada del artículo gastronómico" class="rounded-lg w-full">
                     </div>
                 </div>
             </div>
@@ -160,14 +166,14 @@
             
             <div>
                 <h2>Panaderías con tradición</h2>
-                <img src="img/panaderia-tradicion.png" alt="Pan amasado en horno de barro" class="rounded-lg shadow-md w-full md:w-1/2 md:float-right md:ml-8 mb-4">
+                <img src="img/panaderia-tradicion.png" alt="Pan amasado en horno de barro" class="rounded-lg w-full md:w-1/2 md:float-right md:ml-8 mb-4">
                 <p>El aroma del pan amasado te guía por las calles de Paredones. En la panadería <strong>Las 3 N</strong>, las empanadas de pera son casi una obligación: una receta de generaciones que mezcla fruta y masa en una combinación única (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+19,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 19</a>, Tel. <a href="tel:+56985813927" class="text-brand-red hover:underline">+56 9 8581 3927</a>). Muy cerca, <strong>La Central</strong> mantiene la costumbre de abrir temprano para ofrecer pan caliente y empanadas de domingo, convirtiéndose en el punto de partida perfecto para un desayuno de plaza (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+25,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 25</a>, Tel. <a href="tel:+569964345034" class="text-brand-red hover:underline">+56 9 9643 45034</a>).</p>
             </div>
             <div style="clear: both;"></div>
 
             <div>
                 <h2>Comida rápida y platos caseros</h2>
-                <img src="img/comida-casera.png" alt="Plato de comida casera" class="rounded-lg shadow-md w-full md:w-1/2 md:float-left md:mr-8 mb-4">
+                <img src="img/comida-casera.png" alt="Plato de comida casera" class="rounded-lg w-full md:w-1/2 md:float-left md:mr-8 mb-4">
                 <p>Si el paseo se alarga hasta la hora de almuerzo, el barrio ofrece cocina casera y rápida en un entorno local. <strong>El Comilón de las Palmeras</strong> es ideal para un completo italiano o un sándwich al paso antes de seguir recorriendo (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+39,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 39</a>, Tel. <a href="tel:+569983146190" class="text-brand-red hover:underline">+56 9 9831 46190</a>). A metros de ahí, <strong>El Emporio del Sabor</strong> invita con almuerzos caseros y pollos asados que recuerdan las cocinas familiares de antaño (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+40,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 40</a>, Tel. <a href="tel:+569988315433" class="text-brand-red hover:underline">+56 9 9883 15433</a>). Para quienes prefieren menú del día, <strong>La Selecta VIP</strong> rescata sabores tradicionales e incluso incorpora quinoa en sus preparaciones, reflejo de la producción local (<a href="https://www.google.com/maps/search/?api=1&query=Av.+Doctor+Moore+17,+Paredones" target="_blank" class="text-brand-red hover:underline">Av. Doctor Moore 17</a>, Tel. <a href="tel:+569996249802" class="text-brand-red hover:underline">+56 9 9962 49802</a>).</p>
             </div>
             
@@ -190,7 +196,7 @@
                 <h3 class="text-4xl font-bold text-brand-dark text-center mb-12">También te puede interesar</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Artículo relacionado 1 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden flex flex-col">
                         <img src="img/circuito-patrimonio.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Circuito</span>
@@ -199,7 +205,7 @@
                         </div>
                     </div>
                     <!-- Artículo relacionado 2 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden flex flex-col">
                         <img src="img/feria-verano.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Noticia</span>
@@ -208,7 +214,7 @@
                         </div>
                     </div>
                     <!-- Artículo relacionado 3 -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden flex flex-col">
                         <img src="img/entrevista-panaderia.png" alt="Imagen del artículo" class="w-full h-40 object-cover">
                         <div class="p-6 flex-grow flex flex-col">
                             <span class="bg-brand-red text-white text-xs font-bold px-2 py-1 rounded-full self-start mb-4">Entrevista</span>
